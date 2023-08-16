@@ -30,4 +30,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: run server
-      run: java -jar /home/juhi/actions-runner/ls/docker-repo/docker-repo/target/demo-0.0.1-SNAPSHOT.war
+      run:  kill -9 'sudo losf -t -i:8080' & java -jar /home/juhi/actions-runner/ls/docker-repo/docker-repo/target/demo-0.0.1-SNAPSHOT.war
